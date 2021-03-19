@@ -12,6 +12,7 @@ public enum Architecture {
 
     X64,
     AARCH64;
+    RISCV64;
 
     public static Architecture current() {
         final String architecture = System.getProperty("os.arch", "");
@@ -21,6 +22,8 @@ public enum Architecture {
                 return X64;
             case "aarch64":
                 return AARCH64;
+            case "riscv64":
+                return RISCV64;
             default:
                 throw new IllegalArgumentException("can not determine architecture from [" + architecture + "]");
         }
