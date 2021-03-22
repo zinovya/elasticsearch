@@ -372,7 +372,7 @@ configure(subprojects.findAll { ['archives', 'packages'].contains(it.name) }) {
         } else {
           buildModules = buildDefaultModulesTaskProvider
         }
-        List excludePlatforms = ['linux-x86_64', 'linux-aarch64', 'windows-x86_64', 'darwin-x86_64']
+        List excludePlatforms = ['linux-x86_64', 'linux-aarch64', 'linux-riscv64', 'windows-x86_64', 'darwin-x86_64']
         if (platform != null) {
           excludePlatforms.remove(excludePlatforms.indexOf(platform))
         } else {
@@ -666,6 +666,7 @@ subprojects {
 ['archives:windows-zip', 'archives:oss-windows-zip',
  'archives:darwin-tar', 'archives:oss-darwin-tar',
  'archives:linux-aarch64-tar', 'archives:oss-linux-aarch64-tar',
+ 'archives:linux-riscv64-tar', 'archives:oss-linux-riscv64-tar',
  'archives:linux-tar', 'archives:oss-linux-tar',
  'archives:integ-test-zip',
  'packages:rpm', 'packages:deb',
