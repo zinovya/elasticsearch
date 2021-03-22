@@ -11,7 +11,7 @@ package org.elasticsearch.gradle;
 public enum Architecture {
 
     X64,
-    AARCH64;
+    AARCH64,
     RISCV64;
 
     public static Architecture current() {
